@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pablo Burger Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.jpg" alt="">
+  </header>
+  <div class="menu">
+    <h2>Menu</h2>
+    <img src="images/menu.png" alt="menu.png">
+  </div>
+
+  <h2>Ajouter des éléments</h2>
+  <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Ajouter des éléments...">
+      <div id="search-dropdown" class="dropdown-content"></div>
+      <button id="add-item-btn">Ajouter</button>
+  </div>
+  <div id="selected-items-container">
+      <!-- Selected items will be displayed here -->
+  </div>
+  <h2>Sélectionner le numéro de la Table</h2>
+  <div class="table-selection">
+      <button id="select-table-btn">Sélectionner une Table</button>
+      <!-- Table selection will be inserted here dynamically -->
+  </div>
+  <form id="order-form" action="https://script.google.com/macros/s/AKfycbyZVC3AT-KUMO71GZbvoiYTsVJ8SUw-xpvd12BqSlnrv6cVtrIYFu0WOqU7ZzpWBCGYMg/exec" method="POST">
+    <div class="order-form">
+        <input type="hidden" id="selected-table" name="selectedTable" readonly>
+        <textarea id="order-details" name="selectedProduct" required style="display: none;"></textarea>
+        <button type="submit">Commander</button>
+    </div>
+  </form>
+  <div id="success-message" style="display: none;">Success</div>
+
+  <div id="table-modal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Sélectionner une Table</h2>
+          <div class="tables">
+              <!-- Tables will be inserted here dynamically -->
+          </div>
+      </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h4>Contact Us</h4>
+        <p>Phone: <a href="tel:+1234567890">0791 71 71 72</a></p>
+        <p>Email: <a href="mailto:example@example.com">pabloburger21@gmail.com</a></p>
+        <a href="https://wa.me/213791717172" target="_blank"><img src="images/whatsapp.png" alt=""></a>
+        <a href="https://web.facebook.com/profile.php?id=100077126041767" target="_blank"><img src="images/fb.png" alt=""></a>
+        <a href="https://www.instagram.com/pablo_burger_21/" target="_blank"><img src="images/insta.png" alt=""></a>
+        <a href="https://www.tiktok.com/@pabloburger" target="_blank"><img src="images/tiktok.png" alt=""></a>
+        <p>Address: Rue didouche mourad ( la place)</p>
+      </div>
+    </div>
+  </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
